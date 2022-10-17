@@ -1,8 +1,26 @@
-.grid {
 
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
+/* MEDIA QUERIES PANTALLA ANCHA */
+
+@media (max-width: 1200px) {
+}
+
+/* MEDIA QUERIES PANTALLA SM */
+
+@media (max-width: 768px) {
+  .filtro-fila {
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+/* MEDIA QUERIES PANTALLA EXTRA-SM */
+
+@media (max-width: 576px) {
+  .icono-wrap {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+  th{
+    font-size: 0.75rem;
+  }
 }

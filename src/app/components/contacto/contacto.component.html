@@ -1,1 +1,71 @@
-<p>contacto works!</p>
+<section>
+  <div class="w-75 m-auto text-center" id="equipo">
+    <h1 class="mb-5 fs-2">
+      Equipo pequeño con
+      <span class="text-primary">Resultados Grandes</span>
+    </h1>
+    <p class="fs-4">
+      Siempre buscamos las personas adecuadas para que trabajen con nosotros. Si
+      te sientes listo para este reto, te esperamos para que te unas a nosotros
+    </p>
+  </div>
+  <div class="mt-5 text-center">
+    <img class="img-fluid" src="../../../assets/index.jpg" alt="" />
+  </div>
+  <div id="local" class="border-top border-2">
+    <div class="mapa"></div>
+  </div>
+</section>
+
+<div class="container" id="contenedor-formulario">
+  <div id="titulo-formulario" class="text-center mb-4">
+    <h2>Contacto</h2>
+    <p class="fs-5">Si quieres información específica, rellena el formulario para que te contactemos</p>
+  </div>
+  <form action="">
+    <div class="mb-3">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        placeholder="name@example.com"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="text"
+        class="form-control"
+        id="nombre"
+        placeholder="Adrian Sanchez"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        type="tel"
+        class="form-control"
+        id="tel"
+        placeholder="0000000000"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <textarea
+        class="form-control"
+        id="exampleFormControlTextarea1"
+        rows="3"
+        placeholder="Escribe tu mensaje"
+      ></textarea>
+    </div>
+    <div>
+      <div class="mb-3">
+        <button type="button" class="btn btn-primary w-100 fs-5">
+          Enviar mensaje
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<app-footer></app-footer>

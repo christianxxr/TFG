@@ -1,86 +1,92 @@
-<table class="table">
-  <tbody>
-    <tr>
-      <th>Tipo de operación</th>
-      <th>País</th>
-      <th>Zona</th>
-      <th>Área</th>
-      <th>Tipo de inmueble</th>
-    </tr>
-    <tr>
-      <td>
-        <select
-          [(ngModel)]="ngDropdown"
-          name="dropdownOption"
-          id="dropdownOptionType"
-          class="form-control"
-        >
-          Seleccione una opción
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </td>
-      <td>
-        <select
-          [(ngModel)]="ngDropdown"
-          name="dropdownOption"
-          id="dropdownOptionCountry"
-          class="form-control"
-        >
-          Seleccione una opción
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </td>
-      <td>
-        <select
-          [(ngModel)]="ngDropdown"
-          name="dropdownOption"
-          id="dropdownOptionZone"
-          class="form-control"
-        >
-          Seleccione una opción
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </td>
-      <td>
-        <select
-          [(ngModel)]="ngDropdown"
-          name="dropdownOption"
-          id="dropdownOptionArea"
-          class="form-control"
-        >
-          Seleccione una opción
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </td>
-      <td>
-        <select
-          [(ngModel)]="ngDropdown"
-          name="dropdownOption"
-          id="dropdownOptionType2"
-          class="form-control"
-        >
-          Seleccione una opción
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-        </select>
-      </td>
-      <td>
-        <button class="btn btn-info">Aplicar filtro</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
-<div class="grid">
-  <div class="card" style="width: 18rem" *ngFor="let card of numeros">
+<app-carousel></app-carousel>
+<section class="row w-100 mx-auto filtro-fila">
+  <div
+    class="col-lg-12 col-md-12 col-sm-12 d-flex my-5 text-center align-items-center justify-content-center icono-wrap"
+  >
+    <table class="table">
+      <tbody>
+        <th>Tipo de operación</th>
+        <th>País</th>
+        <th>Zona</th>
+        <th>Área</th>
+        <th>Tipo de inmueble</th>
+        <tr>
+          <td>
+            <select
+              [(ngModel)]="ngDropdown"
+              name="tipoOperacion"
+              id="tipoOperacion"
+              class="form-control"
+            >
+              Seleccione una opción
+              <option value="operacion1">1</option>
+              <option value="operacion2">2</option>
+              <option value="operacion3">3</option>
+            </select>
+          </td>
+          <td>
+            <select
+              [(ngModel)]="ngDropdown"
+              name="pais"
+              id="pais"
+              class="form-control"
+            >
+              Seleccione una opción
+              <option value="pais1">1</option>
+              <option value="pais2">2</option>
+              <option value="pais3">3</option>
+            </select>
+          </td>
+          <td>
+            <select
+              [(ngModel)]="ngDropdown"
+              name="zona"
+              id="zona"
+              class="form-control"
+            >
+              Seleccione una opción
+              <option value="zona1">1</option>
+              <option value="zona2">2</option>
+              <option value="zona3">3</option>
+            </select>
+          </td>
+          <td>
+            <select
+              [(ngModel)]="ngDropdown"
+              name="area"
+              id="area"
+              class="form-control"
+            >
+              Seleccione una opción
+              <option value="area1">1</option>
+              <option value="area2">2</option>
+              <option value="area3">3</option>
+            </select>
+          </td>
+          <td>
+            <select
+              [(ngModel)]="ngDropdown"
+              name="tipoInmueble"
+              id="tipoInmueble"
+              class="form-control"
+            >
+              Seleccione una opción
+              <option value="inmueble1">1</option>
+              <option value="inmueble2">2</option>
+              <option value="inmueble3">3</option>
+            </select>
+          </td>
+          <td>
+            <button class="btn btn-info">Aplicar filtro</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div
+    class="card col-lg-2 col-md-6 col-sm-12 d-flex my-2 text-center align-items-center justify-content-center icono-wrap"
+    *ngFor="let card of numeros"
+  >
     <img class="card-img-top" src="..." alt="Card image cap" />
     <div class="card-body">
       <h5 class="card-title">Card title</h5>
@@ -91,4 +97,5 @@
       <a href="#" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
-</div>
+</section>
+<app-footer></app-footer>

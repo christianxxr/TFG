@@ -12,9 +12,11 @@ import { HomeComponent } from './components/home/home.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, LogupComponent, HomeComponent, FavoritosComponent, ContactoComponent, ForgetPasswordComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, LogupComponent, HomeComponent, FavoritosComponent, ContactoComponent, ForgetPasswordComponent, FooterComponent, CarouselComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
   providers: [],
   bootstrap: [AppComponent],
