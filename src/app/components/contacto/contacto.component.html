@@ -14,58 +14,73 @@
   </div>
   <div id="local" class="border-top border-2">
     <div class="mapa"></div>
+    <div class="wrapper">
+      <h2>Ubicado en Calle Aravaca 12, Madrid</h2>
+      <p class="fs-5 text-body">
+        Estamos ubicados cerca de la Universidad Politécnica de Madrid, sitio
+        estratégico por la cantidad de estudiantes que pasan a nuestro alrededor
+        y son propensos a alquilar pisos por la zona
+      </p>
+    </div>
   </div>
 </section>
 
-<div class="container" id="contenedor-formulario">
-  <div id="titulo-formulario" class="text-center mb-4">
-    <h2>Contacto</h2>
-    <p class="fs-5">Si quieres información específica, rellena el formulario para que te contactemos</p>
-  </div>
-  <form action="">
-    <div class="mb-3">
-      <input
-        type="email"
-        class="form-control"
-        id="email"
-        placeholder="name@example.com"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <input
-        type="text"
-        class="form-control"
-        id="nombre"
-        placeholder="Adrian Sanchez"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <input
-        type="tel"
-        class="form-control"
-        id="tel"
-        placeholder="0000000000"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <textarea
-        class="form-control"
-        id="exampleFormControlTextarea1"
-        rows="3"
-        placeholder="Escribe tu mensaje"
-      ></textarea>
-    </div>
-    <div>
-      <div class="mb-3">
-        <button type="button" class="btn btn-primary w-100 fs-5">
-          Enviar mensaje
-        </button>
+<section id="seccion-contacto" class="border-bottom border-secondary border-2">
+  <div class="container" id="contenedor-formulario">
+    <div id="titulo-formulario" class="text-center mb-4">
+      <div>
+        <img src="../../../assets/index.jpg" alt="" class="img-fluid" />
       </div>
+      <h2>Contacto</h2>
+      <p class="fs-5">
+        Si quieres información específica, rellena el formulario para que te
+        contactemos
+      </p>
     </div>
-  </form>
-</div>
-
+    <form action="">
+      <div class="mb-3">
+        <input
+          type="email"
+          class="form-control"
+          id="email"
+          placeholder="name@example.com"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="nombre"
+          placeholder="Adrian Sanchez"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <input
+          type="tel"
+          class="form-control"
+          id="tel"
+          placeholder="123456789"
+          required
+        />
+      </div>
+      <div class="mb-3">
+        <textarea
+          class="form-control"
+          id="exampleFormControlTextarea1"
+          rows="3"
+          placeholder="Escribe tu mensaje"
+        ></textarea>
+      </div>
+      <div>
+        <div class="mb-3">
+          <button type="button" class="btn btn-primary w-100 fs-5">
+            Enviar mensaje
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
 <app-footer></app-footer>

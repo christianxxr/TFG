@@ -1,3 +1,6 @@
+i {
+  padding: 0 8px;
+}
 
 /* MEDIA QUERIES PANTALLA ANCHA */
 
@@ -20,7 +23,7 @@
     flex-wrap: wrap;
     justify-content: center !important;
   }
-  th{
+  th {
     font-size: 0.75rem;
   }
 }

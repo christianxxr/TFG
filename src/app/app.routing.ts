@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { ContactoComponent } from './components/contacto/contacto.component';
+import { DetalleVistaComponent } from './components/detalle-vista/detalle-vista.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { ForgetPasswordComponent } from './components/forget-password/forget-password.component';
 import { HomeComponent } from './components/home/home.component';
@@ -13,4 +14,6 @@ export const routes: Routes = [
   { path: 'contacto', component: ContactoComponent },
   { path: 'favorito', component: FavoritosComponent },
   { path: 'login/password', component: ForgetPasswordComponent },
+  { path: 'favorito/detalle', component: DetalleVistaComponent },
+  { path: 'home/detalle', component: DetalleVistaComponent },
 ];

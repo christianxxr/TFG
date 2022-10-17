@@ -1,1 +1,20 @@
-<p>favoritos works!</p>
+<section class="row w-100 mx-auto filtro-fila">
+  <div
+    class="card col-lg-2 col-md-6 col-sm-12 d-flex my-2 text-center align-items-center justify-content-center icono-wrap"
+    *ngFor="let card of numeros"
+  >
+    <img class="card-img-top" src="..." alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">
+        Some quick example text to build on the card title and make up the bulk
+        of the card's content.
+      </p>
+      <div>
+        <a routerLink="detalle" class="btn btn-primary">Más información</a>
+        <i class="bi bi-heart-fill"></i>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>
