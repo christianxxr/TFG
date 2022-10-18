@@ -9,6 +9,11 @@ export class HomeComponent implements OnInit {
   ngDropdown: string | undefined;
   numeros: any;
 
+  operacion = [
+    { value: 'alquiler', viewValue: 'Alquiler' },
+    { value: 'compra', viewValue: 'Compra' },
+  ];
+
   constructor() {
     this.numeros = Array(50);
   }

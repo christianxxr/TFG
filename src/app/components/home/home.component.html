@@ -18,9 +18,9 @@
               id="tipoOperacion"
               class="form-control"
             >
-              <option value="operacion1">1</option>
-              <option value="operacion2">2</option>
-              <option value="operacion3">3</option>
+              <option [value]="option.value" *ngFor="let option of operacion">
+                {{ option.viewValue }}
+              </option>
             </select>
           </td>
           <td>
@@ -72,7 +72,7 @@
             </select>
           </td>
           <td>
-            <button class="btn btn-info">Buscar</button>
+            <button class="btn search">Buscar</button>
           </td>
         </tr>
       </tbody>
@@ -89,7 +89,7 @@
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </p>
-      <a routerLink="detalle" class="linea btn btn-primary mx-1"
+      <a routerLink="detalle" class="linea btn more mx-1"
         >Más información</a
       >
       <!-- <i class="bi bi-heart"></i> -->

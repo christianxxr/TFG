@@ -1,6 +1,12 @@
 i {
   padding: 0 8px;
 }
+
+.more{
+  background-color: #1b2a4e;
+  color: #f3f3f3;
+}
+
 /* MEDIA QUERIES PANTALLA ANCHA */
 
 @media (max-width: 1200px) {

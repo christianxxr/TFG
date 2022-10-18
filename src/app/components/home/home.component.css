@@ -2,6 +2,16 @@ i {
   padding: 0 8px;
 }
 
+.search {
+  background-color: #1b2a4e;
+  color: #f3f3f3;
+}
+
+.more {
+  background-color: #1b2a4e;
+  color: #f3f3f3;
+}
+
 .linea {
   display: inline-block;
 }

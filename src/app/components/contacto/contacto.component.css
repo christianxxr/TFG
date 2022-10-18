@@ -38,6 +38,11 @@
   color: #3f3f3f;
 }
 
+.message{
+  background-color: #1b2a4e;
+  color: #f3f3f3;
+}
+
 @media (max-width: 1200px) {
   #local {
     flex-wrap: wrap;
