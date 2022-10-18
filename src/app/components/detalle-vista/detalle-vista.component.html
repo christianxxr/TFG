@@ -1,7 +1,38 @@
 <section class="my-5">
-  <div class="w-75 m-auto text-center" id="equipo">
+  <div class="w-75 m-auto text-center" id="detalle">
     <div id="local">
-      <div class="casa border border-2"></div>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide border border-2"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img src="../../../assets/index.jpg" class="img-fluid" alt="" />
+          </div>
+          <div class="carousel-item text-center">
+            <img src="../../../assets/index.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
       <div class="wrapper border border-2">
         <h4>Características</h4>
         <p class="text-body">
@@ -12,7 +43,7 @@
       </div>
     </div>
   </div>
-  <div class="w-75 m-auto text-center" id="equipo">
+  <div class="w-75 m-auto text-center" id="detalle">
     <div id="local">
       <div class="wrapper border border-2">
         <h4>Descripción</h4>
@@ -24,12 +55,15 @@
       </div>
       <div class="wrapper border border-2">
         <p class="text-body">
-          Estamos ubicados cerca de la Universidad Politécnica de Madrid, sitio
-          estratégico por la cantidad de estudiantes que pasan a nuestro
-          alrededor y son propensos a alquilar pisos por la zona
+          Si está usted interesado en adquirir esta propiedad, no dude en
+          solitar la información que estime oportuna.
+        </p>
+        <p class="text-body">
+          Nuestros consultores están a su disposición para proporcionar la
+          información que necesite.
         </p>
         <a
-          href="mailto:christian.diez9558@gmail.com"
+          href="mailto:a.future.sweet.home@gmail.com?Subject=Presupuesto%20general"
           class="btn btn-primary w-100 fs-5"
           >Pedir presupuesto</a
         >
@@ -37,3 +71,4 @@
     </div>
   </div>
 </section>
+<app-footer></app-footer>

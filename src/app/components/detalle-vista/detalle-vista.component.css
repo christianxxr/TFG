@@ -1,7 +1,9 @@
 .casa {
-  background: url(../../../assets/mapa.png);
   width: 100%;
   height: 500px;
+}
+.carousel-inner {
+  max-height: 500px;
 }
 
 #local {
@@ -14,4 +16,22 @@
 .wrapper {
   width: 50%;
   margin-left: 100px;
+}
+
+@media (max-width: 1200px) {
+  #local {
+    flex-wrap: wrap;
+    padding-top: 30px;
+  }
+  .wrapper {
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  #intro #detalle {
+    width: 90% !important;
+  }
 }

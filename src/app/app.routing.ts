@@ -16,4 +16,5 @@ export const routes: Routes = [
   { path: 'login/password', component: ForgetPasswordComponent },
   { path: 'favorito/detalle', component: DetalleVistaComponent },
   { path: 'home/detalle', component: DetalleVistaComponent },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
 ];

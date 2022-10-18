@@ -2,6 +2,10 @@ i {
   padding: 0 8px;
 }
 
+.linea {
+  display: inline-block;
+}
+
 /* MEDIA QUERIES PANTALLA ANCHA */
 
 @media (max-width: 1200px) {
@@ -22,8 +26,5 @@ i {
   .icono-wrap {
     flex-wrap: wrap;
     justify-content: center !important;
-  }
-  th {
-    font-size: 0.75rem;
   }
 }
