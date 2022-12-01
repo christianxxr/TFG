@@ -1,0 +1,15 @@
+.more {
+  background-color: #1b2a4e;
+  color: #f3f3f3;
+}
+.danger{
+    background-color: rgb(241, 25, 25);
+    color: #f3f3f3;
+}
+
+.linea {
+  display: inline-block;
+}
+i {
+  padding: 0 8px;
+}

@@ -14,10 +14,10 @@
           <tr>
             <td>
               <select
-                [(ngModel)]="ngDropdown"
-                name="tipoOperacion"
-                id="tipoOperacion"
-                class="form-control"
+                [(ngModel)]="ngDropdownPais"
+                name="pais"
+                id="pais"
+                class="form-select"
               >
                 <option [value]="option.value" *ngFor="let option of operacion">
                   {{ option.viewValue }}
@@ -26,52 +26,41 @@
             </td>
             <td>
               <select
-                [(ngModel)]="ngDropdown"
-                name="pais"
-                id="pais"
-                class="form-control"
-              >
-                <option value="pais1">1</option>
-                <option value="pais2">2</option>
-                <option value="pais3">3</option>
-              </select>
-            </td>
-            <td>
-              <select
-                [(ngModel)]="ngDropdown"
+                [(ngModel)]="ngDropdownZona"
                 name="zona"
                 id="zona"
-                class="form-control"
+                class="form-select"
               >
-                <option value="zona1">1</option>
-                <option value="zona2">2</option>
-                <option value="zona3">3</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
               </select>
             </td>
             <td>
               <select
-                [(ngModel)]="ngDropdown"
+                [(ngModel)]="ngDropdownArea"
                 name="area"
                 id="area"
-                class="form-control"
+                class="form-select"
               >
-                <option value="area1">1</option>
-                <option value="area2">2</option>
-                <option value="area3">3</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
               </select>
             </td>
             <td>
               <select
-                [(ngModel)]="ngDropdown"
+                [(ngModel)]="ngDropdownInmueble"
                 name="tipoInmueble"
                 id="tipoInmueble"
-                class="form-control"
+                class="form-select"
               >
-                <option value="inmueble1">1</option>
-                <option value="inmueble2">2</option>
-                <option value="inmueble3">3</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
               </select>
             </td>
+
             <td>
               <button class="btn search">Buscar</button>
             </td>
@@ -92,7 +81,6 @@
         of the card's content.
       </p>
       <a routerLink="detalle" class="linea btn more mx-1">Más información</a>
-      <!-- <i class="bi bi-heart"></i> -->
       <button class="linea btn btn-danger"><i class="bi bi-heart"></i></button>
     </div>
   </div>

@@ -15,9 +15,12 @@ import { ForgetPasswordComponent } from './components/forget-password/forget-pas
 import { FooterComponent } from './components/footer/footer.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { DetalleVistaComponent } from './components/detalle-vista/detalle-vista.component';
+import { HomeEmpleadoComponent } from './components/home-empleado/home-empleado.component';
+import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueble.component';
+import { EditarInmuebleComponent } from './components/editar-inmueble/editar-inmueble.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, LogupComponent, HomeComponent, FavoritosComponent, ContactoComponent, ForgetPasswordComponent, FooterComponent, CarouselComponent, DetalleVistaComponent],
+  declarations: [AppComponent, HeaderComponent, LoginComponent, LogupComponent, HomeComponent, FavoritosComponent, ContactoComponent, ForgetPasswordComponent, FooterComponent, CarouselComponent, DetalleVistaComponent, HomeEmpleadoComponent, NuevoInmuebleComponent, EditarInmuebleComponent],
   imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
   providers: [],
   bootstrap: [AppComponent],

@@ -6,7 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  ngDropdown: string | undefined;
+  ngDropdownOperacion: string | undefined;
+  ngDropdownPais: string | undefined;
+  ngDropdownZona: string | undefined;
+  ngDropdownArea: string | undefined;
+  ngDropdownInmueble: string | undefined;
   numeros: any;
 
   operacion = [
