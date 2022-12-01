@@ -5,7 +5,15 @@
       <form action="" method="post">
         <p>
           Tipo de operación:
-          <input type="text" placeholder="Compra/Alquiler/Venta" />
+          <select
+            [(ngModel)]="ngDropdownOperacion"
+            name="tipoOperacion"
+            id="tipoOperacion"
+          >
+            <option [value]="option.value" *ngFor="let option of operacion">
+              {{ option.viewValue }}
+            </option>
+          </select>
         </p>
         <p>País: <input type="text" /></p>
         <p>Zona: <input type="text" /></p>
