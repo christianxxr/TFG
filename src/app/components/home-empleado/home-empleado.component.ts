@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 
 @Component({
   selector: 'app-home-empleado',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeEmpleadoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private api:InmueblesService) { }
 
   ngOnInit(): void {
+    this.api.mostrarTodosLosInmuebles().subscribe(data => {
+      console.log(data);
+    })
   }
 
 }
