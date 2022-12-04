@@ -12,8 +12,19 @@ export class InmueblesService {
 
   constructor(private http: HttpClient) { }
 
+  
+
   mostrarTodosLosInmuebles(): Observable<IntInmueble[]> {
     //let url = this.urlRequestMapping + 'mostrarTodos';
     return this.http.get<IntInmueble[]>('/inmuebles/mostrarTodos');
   }
+
+  mostrarInmueblePorId(id: string): Observable<IntInmueble> {
+    return this.http.get<IntInmueble>('/inmuebles/mostrar/id');
+  }
+ 
+  eliminarInmueble(id: string): Observable<any> {
+    return this.http.delete('/inmuebles/borrar/id');
+  }
+
 }

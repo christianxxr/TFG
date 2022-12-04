@@ -21,6 +21,6 @@ export const routes: Routes = [
   { path: 'home/detalle', component: DetalleVistaComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home-empleado', component: HomeEmpleadoComponent },
-  {path: 'home-empleado/nuevo-inmueble', component: NuevoInmuebleComponent},
-  {path: 'home-empleado/editar-inmueble', component: EditarInmuebleComponent},
+  { path: 'home-empleado/nuevo-inmueble', component: NuevoInmuebleComponent},
+  { path: 'home-empleado/editar-inmueble/:id', component: EditarInmuebleComponent},
 ];
