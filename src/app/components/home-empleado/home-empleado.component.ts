@@ -45,13 +45,7 @@ export class HomeEmpleadoComponent implements OnInit {
   editarInmueble(id: string) {
     this.router.navigate(['home-empleado/editar-inmueble', id]);
   }
-
-//! PARA SALIR DEL PASO CON ELIMINAR
-  //eliminarInmueble() {
-   // console.log("Intentando eliminar inmueble");
-  //}
-
-  
+ 
   eliminarInmueble(id: string) {
     this.servicio.eliminarInmueble(id).subscribe(data => {
       this.servicio.mostrarTodosLosInmuebles().subscribe(response =>

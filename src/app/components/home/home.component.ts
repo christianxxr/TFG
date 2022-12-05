@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor() {
-    this.numeros = Array(50);
+    this.numeros = Array(6);
   }
 
   ngOnInit(): void {}

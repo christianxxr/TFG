@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IntInmueble } from '../model/inmuebles.interface';
 
@@ -11,8 +11,11 @@ export class InmueblesService {
 
   constructor(private http: HttpClient) {}
 
-  //ToDo: Método para añadir un inmueble
-  incluirInmueble() {}
+  incluirInmueble(inmueble: IntInmueble): Observable<IntInmueble> {
+    //let httpheaders = new HttpHeaders().set('Content-type', 'application/Json');
+    //let options = { headers: httpheaders};
+    return this.http.post<IntInmueble>('/inmuebles/crear', inmueble);
+  }
 
   mostrarTodosLosInmuebles(): Observable<IntInmueble[]> {
     return this.http.get<IntInmueble[]>('/inmuebles/mostrarTodos');

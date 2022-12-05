@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { LogupComponent } from './components/logup/logup.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { FavoritosComponent } from './components/favoritos/favoritos.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
@@ -41,7 +41,8 @@ import { EditarInmuebleComponent } from './components/editar-inmueble/editar-inm
     BrowserModule, 
     HttpClientModule,
     RouterModule.forRoot(routes), 
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
