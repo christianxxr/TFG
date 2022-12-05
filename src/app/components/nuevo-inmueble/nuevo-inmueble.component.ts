@@ -8,10 +8,12 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 @Component({
   selector: 'app-nuevo-inmueble',
   templateUrl: './nuevo-inmueble.component.html',
-  styleUrls: ['./nuevo-inmueble.component.css']
+  styleUrls: ['./nuevo-inmueble.component.css'],
 })
 export class NuevoInmuebleComponent implements OnInit {
+  ngDropdownOperacion: string | undefined;
 
+<<<<<<< HEAD
   inmuebleFormulario: FormGroup = new FormGroup({
     operacion: new FormControl(''),
     pais: new FormControl(''),
@@ -50,5 +52,14 @@ export class NuevoInmuebleComponent implements OnInit {
     //let inmueble = this.inmuebleFormulario.value;
     //this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
   }
+=======
+  operacion = [
+    { value: 'alquiler', viewValue: 'Alquiler' },
+    { value: 'compra', viewValue: 'Compra' },
+  ];
 
+  constructor() {}
+>>>>>>> 5922ac387f4c8328992b1996d5676f63849c312a
+
+  ngOnInit(): void {}
 }
