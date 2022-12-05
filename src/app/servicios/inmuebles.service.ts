@@ -11,15 +11,19 @@ export class InmueblesService {
 
   constructor(private http: HttpClient) {}
 
+  //ToDo: Método para añadir un inmueble
+  incluirInmueble() {}
+
   mostrarTodosLosInmuebles(): Observable<IntInmueble[]> {
     return this.http.get<IntInmueble[]>('/inmuebles/mostrarTodos');
   }
 
-  /*
   mostrarInmueblePorId(id: string): Observable<string> {
-    return this.http.get<IntInmueble>('/inmuebles/mostrar/id');
+    return this.http.get<string>('/inmuebles/mostrar' + '/' + id);
   }
-  */
+
+  //ToDo: Método para editar un inmueble por id
+  editarInmueble() {}
 
   eliminarInmueble(id: string): Observable<string> {
     return this.http.delete<string>('/inmuebles/borrar' + '/' + id);
