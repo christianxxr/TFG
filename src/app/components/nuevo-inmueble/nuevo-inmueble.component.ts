@@ -1,9 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Observable } from 'rxjs';
 import { IntInmueble } from 'src/app/model/inmuebles.interface';
 import { InmueblesService } from 'src/app/servicios/inmuebles.service';
-
 
 @Component({
   selector: 'app-nuevo-inmueble',
@@ -22,7 +26,10 @@ export class NuevoInmuebleComponent implements OnInit {
     precio: new FormControl(''),
   });
 
-  constructor(private formbuilder: FormBuilder, private servicio: InmueblesService) { }
+  constructor(
+    private formbuilder: FormBuilder,
+    private servicio: InmueblesService
+  ) {}
 
   ngOnInit(): void {}
 
