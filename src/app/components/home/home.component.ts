@@ -15,7 +15,8 @@ export class HomeComponent implements OnInit {
 
   operacion = [
     { value: 'alquiler', viewValue: 'Alquiler' },
-    { value: 'compra', viewValue: 'Compra' },
+    { value: 'venta', viewValue: 'Venta' },
+    { value: 'venta-alquiler', viewValue: 'Venta-Alquiler' }
   ];
 
   constructor() {

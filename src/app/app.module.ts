@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -20,8 +21,28 @@ import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueb
 import { EditarInmuebleComponent } from './components/editar-inmueble/editar-inmueble.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, LoginComponent, LogupComponent, HomeComponent, FavoritosComponent, ContactoComponent, ForgetPasswordComponent, FooterComponent, CarouselComponent, DetalleVistaComponent, HomeEmpleadoComponent, NuevoInmuebleComponent, EditarInmuebleComponent],
-  imports: [BrowserModule, RouterModule.forRoot(routes), FormsModule],
+  declarations: [
+    AppComponent, 
+    HeaderComponent, 
+    LoginComponent, 
+    LogupComponent, 
+    HomeComponent, 
+    FavoritosComponent, 
+    ContactoComponent, 
+    ForgetPasswordComponent, 
+    FooterComponent, 
+    CarouselComponent, 
+    DetalleVistaComponent, 
+    HomeEmpleadoComponent, 
+    NuevoInmuebleComponent, 
+    EditarInmuebleComponent
+  ],
+  imports: [
+    BrowserModule, 
+    HttpClientModule,
+    RouterModule.forRoot(routes), 
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
