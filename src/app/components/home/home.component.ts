@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { InmueblesService } from 'src/app/servicios/inmuebles.service';
+import { IntInmueble } from 'src/app/model/inmuebles.interface';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -19,9 +23,21 @@ export class HomeComponent implements OnInit {
     { value: 'venta-alquiler', viewValue: 'Venta-Alquiler' }
   ];
 
-  constructor() {
+  listaInmuebles: IntInmueble[] = [];
+
+  constructor(private servicio:InmueblesService, private router: Router) {
     this.numeros = Array(6);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.obtenerTodosLosInmuebles();
+  }
+
+  obtenerTodosLosInmuebles() {
+    this.servicio.mostrarTodosLosInmuebles().subscribe(data => {
+      this.listaInmuebles = data;
+    });
+
+  }
+
 }

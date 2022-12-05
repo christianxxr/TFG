@@ -6,5 +6,6 @@ export interface IntInmueble {
     area: string;
     tipoInmueble: string;
     precio: number;
+    urlImagen: string;
     guardadoPor: string[]
 }

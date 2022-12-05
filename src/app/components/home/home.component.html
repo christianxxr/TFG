@@ -67,9 +67,9 @@
                 id="tipoInmueble"
                 class="form-select"
               >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+                <option value="vivienda">Vivienda</option>
+                <option value="local">Local</option>
+                <option value="garaje">Garaje</option>
               </select>
             </td>
 
@@ -82,18 +82,18 @@
     </div>
   </form>
   <div
-    class="card col-lg-2 col-md-6 col-sm-12 d-flex my-2 text-center align-items-center justify-content-center icono-wrap"
-    *ngFor="let card of numeros"
+    class="card col-lg-2 col-md-6 col-sm-12 d-flex my-2 text-center align-items-center justify-content-center icono-wrap m-1"
+    *ngFor="let inmueble of listaInmuebles"
   >
-    <img class="card-img-top" src="..." alt="Card image cap" />
+    <img class="card-img-top" src="https://thumbs2.imgbox.com/7f/c5/Mcar4Y9n_t.jpg" alt="Card image cap" />
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title">{{inmueble.tipoInmueble}}</h5>
       <p class="card-text">
         Some quick example text to build on the card title and make up the bulk
         of the card's content.
       </p>
       <a routerLink="detalle" class="linea btn more mx-1">Más información</a>
-      <button class="linea btn btn-danger"><i class="bi bi-heart"></i></button>
+      <button class="linea btn btn-danger mt-3"><i class="bi bi-heart"></i></button>
     </div>
   </div>
 </section>

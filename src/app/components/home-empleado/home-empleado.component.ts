@@ -20,6 +20,7 @@ export class HomeEmpleadoComponent implements OnInit {
     area: "",
     tipoInmueble: "",
     precio: 0,
+    urlImagen: "",
     guardadoPor: []
   };
   
