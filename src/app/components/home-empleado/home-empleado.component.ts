@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 import { IntInmueble } from 'src/app/model/inmuebles.interface';
 import { Router } from '@angular/router';
@@ -46,17 +47,16 @@ export class HomeEmpleadoComponent implements OnInit {
   }
 
 //! PARA SALIR DEL PASO CON ELIMINAR
-  eliminarInmueble() {
-    console.log("Intentando eliminar inmueble");
-  }
+  //eliminarInmueble() {
+   // console.log("Intentando eliminar inmueble");
+  //}
 
-  /*
+  
   eliminarInmueble(id: string) {
-    this.inmueble?.mostrarInmueblePorId(id);
-    this.servicio.eliminarInmueble(inmueble.inmuebleId).subscribe(data => {
+    this.servicio.eliminarInmueble(id).subscribe(data => {
       this.servicio.mostrarTodosLosInmuebles().subscribe(response =>
-        this.listaInmuebles = response);
+        this.obtenerTodosLosInmuebles());
     });
   }
-  */
+  
 }

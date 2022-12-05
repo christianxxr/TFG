@@ -23,7 +23,7 @@
         <td>{{ inmueble.precio }}</td>
         <td>
           <a routerLink="editar-inmueble" class="linea btn more mx-1"><i class="bi bi-pencil"></i>Editar</a>
-          <button type="button" class="btn btn-danger" (click)="eliminarInmueble()"><i class="bi bi-trash3"></i></button>
+          <button type="button" class="btn btn-danger" (click)="eliminarInmueble(inmueble.inmuebleId)"><i class="bi bi-trash3"></i></button>
         </td>
       </tr>
     </tbody>
