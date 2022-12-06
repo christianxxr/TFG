@@ -85,7 +85,7 @@
     class="card col-lg-2 col-md-6 col-sm-12 d-flex my-2 text-center align-items-center justify-content-center icono-wrap m-1"
     *ngFor="let inmueble of listaInmuebles"
   >
-    <img class="card-img-top" src="https://thumbs2.imgbox.com/7f/c5/Mcar4Y9n_t.jpg" alt="Card image cap" />
+    <img class="card-img-top" src="{{inmueble.urlImagen}}" alt="Card image cap" />
     <div class="card-body">
       <h5 class="card-title">{{inmueble.tipoInmueble}}</h5>
       <p class="card-text">
