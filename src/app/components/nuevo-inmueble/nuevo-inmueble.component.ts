@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { Router} from '@angular/router';
 import { IntInmueble } from 'src/app/model/inmuebles.interface';
 import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 
@@ -15,21 +11,22 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
   styleUrls: ['./nuevo-inmueble.component.css'],
 })
 export class NuevoInmuebleComponent implements OnInit {
-  ngDropdownOperacion: string | undefined;
+  
+  //ngDropdownOperacion: string | undefined;
+
+  inmueble: IntInmueble | undefined;
+  
 
   inmuebleFormulario: FormGroup = new FormGroup({
     operacion: new FormControl(''),
     pais: new FormControl(''),
     zona: new FormControl(''),
     area: new FormControl(''),
-    inmueble: new FormControl(''),
+    tipoInmueble: new FormControl(''),
     precio: new FormControl(''),
   });
 
-  constructor(
-    private formbuilder: FormBuilder,
-    private servicio: InmueblesService
-  ) {}
+  constructor(private formbuilder: FormBuilder, private servicio: InmueblesService) {}
 
   ngOnInit(): void {}
 
@@ -45,8 +42,8 @@ export class NuevoInmuebleComponent implements OnInit {
   get area() {
     return this.inmuebleFormulario.get('area');
   }
-  get inmueble() {
-    return this.inmuebleFormulario.get('inmueble');
+  get tipoInmueble() {
+    return this.inmuebleFormulario.get('tipoInmueble');
   }
   get precio() {
     return this.inmuebleFormulario.get('precio');
@@ -54,8 +51,12 @@ export class NuevoInmuebleComponent implements OnInit {
 
   enviarDatosNuevoInmueble() {
     console.table(this.inmuebleFormulario.value);
-
-    //let inmueble = this.inmuebleFormulario.value;
-    //this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
+    let inmueble = this.inmuebleFormulario.value;
+    this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
+    alert("Inmueble añadido a la base de datos")
   }
+
+
+
+
 }
