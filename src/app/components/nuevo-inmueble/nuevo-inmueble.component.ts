@@ -12,26 +12,28 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 })
 export class NuevoInmuebleComponent implements OnInit {
   
-  //ngDropdownOperacion: string | undefined;
-
   inmueble: IntInmueble | undefined;
   
-
   inmuebleFormulario: FormGroup = new FormGroup({
-    operacion: new FormControl(''),
+    inmuebleId: new FormControl(''),
+    tipoOperacion: new FormControl(''),
     pais: new FormControl(''),
     zona: new FormControl(''),
     area: new FormControl(''),
     tipoInmueble: new FormControl(''),
     precio: new FormControl(''),
+    urlImagen: new FormControl('')
   });
 
   constructor(private formbuilder: FormBuilder, private servicio: InmueblesService) {}
 
   ngOnInit(): void {}
 
-  get operacion() {
-    return this.inmuebleFormulario.get('operacion');
+  get inmuebleId() {
+    return this.inmuebleFormulario.get('inmuebleId');
+  }
+  get tipoOperacion() {
+    return this.inmuebleFormulario.get('tipoOperacion');
   }
   get pais() {
     return this.inmuebleFormulario.get('pais');
@@ -49,11 +51,16 @@ export class NuevoInmuebleComponent implements OnInit {
     return this.inmuebleFormulario.get('precio');
   }
 
+  get urlImagen() {
+    return this.inmuebleFormulario.get('urlImagen');
+  }
+
   enviarDatosNuevoInmueble() {
-    console.table(this.inmuebleFormulario.value);
     let inmueble = this.inmuebleFormulario.value;
     this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
     alert("Inmueble añadido a la base de datos")
+    this.inmuebleFormulario.reset;
+    
   }
 
 

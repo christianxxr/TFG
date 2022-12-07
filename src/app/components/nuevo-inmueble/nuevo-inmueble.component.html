@@ -1,13 +1,16 @@
 <div class="container" style="width: 40% ;">
 
-
   <h4 class="mt-3">Formulario para alta de nuevo inmueble</h4>
+
   <form [formGroup]="inmuebleFormulario" (ngSubmit)="enviarDatosNuevoInmueble()">
+
     <div class="form-group">
 
-      <label for="operacion" class="form label mt-1">Tipo de Operación</label>
-      <select name="operacion" id="operacion" class="form-control mt-1" formControlName="operacion">
-        <option selected>Escoge el tipo de operación</option>
+      <label for="inmuebleId" class="form-label mt-1">ID</label>
+      <input type="text" class="form-control mt-1" id="inmuebleId" placeholder="ID" formControlName="inmuebleId">
+
+      <label for="tipoOperacion" class="form label mt-1">Tipo de Operación</label>
+      <select name="tipoOperacion" id="tipoOperacion" class="form-control mt-1" formControlName="tipoOperacion">
         <option value="Venta">Venta</option>
         <option value="Alquiler">Alquiler</option>
         <option value="Venta-Alquiler">Venta-Alquiler</option>
@@ -31,6 +34,9 @@
 
       <label for="precio" class="mt-1">Precio</label>
       <input type="number" class="form-control mt-1" id="precio" placeholder="Precio" formControlName="precio">
+
+      <label for="urlImagen" class="mt-1">URL Imagen</label>
+      <input type="text" class="form-control mt-1" id="urlImagen" placeholder="URL Imagen" formControlName="urlImagen">
 
       <button type="submit" class="btn mt-3" style="width: 100%;">Enviar</button>
 
