@@ -14,7 +14,7 @@ export class EditarInmuebleComponent implements OnInit {
   
   inmueble: IntInmueble | undefined;
   
-  inmuebleFormulario: FormGroup = new FormGroup({
+  inmuebleExistenteFormulario: FormGroup = new FormGroup({
     inmuebleId: new FormControl(''),
     tipoOperacion: new FormControl(''),
     pais: new FormControl(''),
@@ -30,36 +30,36 @@ export class EditarInmuebleComponent implements OnInit {
   ngOnInit(): void {}
 
   get inmuebleId() {
-    return this.inmuebleFormulario.get('inmuebleId');
+    return this.inmuebleExistenteFormulario.get('inmuebleId');
   }
   get tipoOperacion() {
-    return this.inmuebleFormulario.get('tipoOperacion');
+    return this.inmuebleExistenteFormulario.get('tipoOperacion');
   }
   get pais() {
-    return this.inmuebleFormulario.get('pais');
+    return this.inmuebleExistenteFormulario.get('pais');
   }
   get zona() {
-    return this.inmuebleFormulario.get('zona');
+    return this.inmuebleExistenteFormulario.get('zona');
   }
   get area() {
-    return this.inmuebleFormulario.get('area');
+    return this.inmuebleExistenteFormulario.get('area');
   }
   get tipoInmueble() {
-    return this.inmuebleFormulario.get('tipoInmueble');
+    return this.inmuebleExistenteFormulario.get('tipoInmueble');
   }
   get precio() {
-    return this.inmuebleFormulario.get('precio');
+    return this.inmuebleExistenteFormulario.get('precio');
   }
 
   get urlImagen() {
-    return this.inmuebleFormulario.get('urlImagen');
+    return this.inmuebleExistenteFormulario.get('urlImagen');
   }
 
-  enviarDatosNuevoInmueble() {
-    let inmueble = this.inmuebleFormulario.value;
+  enviarDatosInmuebleExistente() {
+    let inmueble = this.inmuebleExistenteFormulario.value;
     this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
     alert("Inmueble actualizado en la base de datos")
-    this.inmuebleFormulario.reset;
+    this.inmuebleExistenteFormulario.reset;
     
   }
 
