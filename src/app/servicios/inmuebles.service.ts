@@ -21,12 +21,14 @@ export class InmueblesService {
     return this.http.get<IntInmueble[]>('/inmuebles/mostrarTodos');
   }
 
-  mostrarInmueblePorId(id: string): Observable<string> {
+  mostrarInmueblePorId(id: string): Observable<any> {
     return this.http.get<string>('/inmuebles/mostrar' + '/' + id);
   }
 
   //ToDo: Método para editar un inmueble por id
-  editarInmueble() {}
+  editarInmueble(inmueble: IntInmueble): Observable<IntInmueble> {
+    return this.http.put<IntInmueble>('/inmuebles/modificar', inmueble);
+  }
 
   eliminarInmueble(id: string): Observable<string> {
     return this.http.delete<string>('/inmuebles/borrar' + '/' + id);

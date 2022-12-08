@@ -4,6 +4,7 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 import { IntInmueble } from 'src/app/model/inmuebles.interface';
 import { Router } from '@angular/router';
 import { NuevoInmuebleComponent } from '../nuevo-inmueble/nuevo-inmueble.component';
+import { EditarInmuebleComponent } from '../editar-inmueble/editar-inmueble.component';
 
 @Component({
   selector: 'app-home-empleado',
@@ -43,7 +44,19 @@ export class HomeEmpleadoComponent implements OnInit {
     this.router.navigate(['home-empleado/nuevo-inmueble']);
   }
 
-  editarInmueble() {
+  formularioEditarInmueble(id: string) {
+    this.servicio.mostrarInmueblePorId(id).subscribe(data => {
+      this.inmueble.inmuebleId = data.inmuebleId;
+      this.inmueble.tipoOperacion = data.tipoOperacion;
+      this.inmueble.pais = data.pais;
+      this.inmueble.zona = data.zona;
+      this.inmueble.area = data.area;
+      this.inmueble.tipoInmueble = data.tipoInmueble;
+      this.inmueble.precio = data.precio;
+      this.inmueble.urlImagen = data.urlImagen;
+      
+    });
+    
     this.router.navigate(['home-empleado/editar-inmueble']);
   }
  
@@ -53,5 +66,7 @@ export class HomeEmpleadoComponent implements OnInit {
         this.obtenerTodosLosInmuebles());
     });
   }
+
+  
   
 }
