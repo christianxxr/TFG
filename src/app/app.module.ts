@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
 
 import { routes } from './app.routing';
 import { AppComponent } from './app.component';
@@ -19,6 +20,11 @@ import { DetalleVistaComponent } from './components/detalle-vista/detalle-vista.
 import { HomeEmpleadoComponent } from './components/home-empleado/home-empleado.component';
 import { NuevoInmuebleComponent } from './components/nuevo-inmueble/nuevo-inmueble.component';
 import { EditarInmuebleComponent } from './components/editar-inmueble/editar-inmueble.component';
+
+import localeEs from '@angular/common/locales/es';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localeEs, 'es');
+
 
 @NgModule({
   declarations: [
@@ -44,7 +50,7 @@ import { EditarInmuebleComponent } from './components/editar-inmueble/editar-inm
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ {provide: LOCALE_ID, useValue: 'es'}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
