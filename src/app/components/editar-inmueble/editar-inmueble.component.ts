@@ -58,7 +58,7 @@ export class EditarInmuebleComponent implements OnInit {
   enviarDatosNuevoInmueble() {
     let inmueble = this.inmuebleFormulario.value;
     this.servicio.incluirInmueble(inmueble).subscribe(data => console.log(data));
-    alert("Inmueble añadido a la base de datos")
+    alert("Inmueble actualizado en la base de datos")
     this.inmuebleFormulario.reset;
     
   }
