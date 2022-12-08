@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Router} from '@angular/router';
@@ -13,9 +13,8 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 
 export class EditarInmuebleComponent implements OnInit {
 
-  @Input() inmueble: IntInmueble | undefined;
+  @Input() inmuebleId: string | undefined;
 
-  
   inmuebleExistenteFormulario: FormGroup = new FormGroup({
     inmuebleId: new FormControl(''),
     tipoOperacion: new FormControl(''),
@@ -31,8 +30,7 @@ export class EditarInmuebleComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  
-  get inmuebleId() {
+  get inmuebleEditarId() {
     return this.inmuebleExistenteFormulario.get('inmuebleId');
   }
   get tipoOperacion() {

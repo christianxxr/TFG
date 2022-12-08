@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 import { IntInmueble } from 'src/app/model/inmuebles.interface';
@@ -6,11 +6,14 @@ import { Router } from '@angular/router';
 import { NuevoInmuebleComponent } from '../nuevo-inmueble/nuevo-inmueble.component';
 import { EditarInmuebleComponent } from '../editar-inmueble/editar-inmueble.component';
 
+
 @Component({
   selector: 'app-home-empleado',
   templateUrl: './home-empleado.component.html',
   styleUrls: ['./home-empleado.component.css']
 })
+
+
 export class HomeEmpleadoComponent implements OnInit {
 
   inmueble: IntInmueble = {
@@ -54,12 +57,11 @@ export class HomeEmpleadoComponent implements OnInit {
       this.inmueble.tipoInmueble = data.tipoInmueble;
       this.inmueble.precio = data.precio;
       this.inmueble.urlImagen = data.urlImagen;
-      
+      console.table(this.inmueble);
     });
-    
     this.router.navigate(['home-empleado/editar-inmueble']);
   }
- 
+
   eliminarInmueble(id: string) {
     this.servicio.eliminarInmueble(id).subscribe(data => {
       this.servicio.mostrarTodosLosInmuebles().subscribe(response =>
