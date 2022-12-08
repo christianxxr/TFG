@@ -44,7 +44,7 @@ export class HomeEmpleadoComponent implements OnInit {
   }
 
   editarInmueble(id: string) {
-    this.router.navigate(['home-empleado/editar-inmueble', id]);
+    this.router.navigate(['home-empleado/editar-inmueble'+ '/' +id]);
   }
  
   eliminarInmueble(id: string) {
