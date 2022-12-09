@@ -30,6 +30,7 @@ export class HomeEmpleadoComponent implements OnInit {
   
   listaInmuebles: IntInmueble[] = [];
 
+
   constructor(private servicio:InmueblesService, private router: Router) { }
 
   ngOnInit(): void {
