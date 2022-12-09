@@ -1,47 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { UsuariosService } from 'src/app/servicios/usuarios.service';
 import { IntUsuario } from 'src/app/model/usuarios.interface';
 import { Router } from '@angular/router';
-//import { NuevoInmuebleComponent } from '../nuevo-inmueble/nuevo-inmueble.component';
-//import { EditarInmuebleComponent } from '../editar-inmueble/editar-inmueble.component';
+import { LoginService } from 'src/app/servicios/login.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
+
 export class LoginComponent implements OnInit {
-
-  email: string | undefined;
-  password: string | undefined;
-
-  login() {}
-
-  ngOnInit(): void {}
-
-  /*
-
-  usuario: IntUsuario | undefined;
-  id: string | undefined;
-
-  //email: string | undefined;
-  //contrasena: string | undefined;
 
   loginFormulario: FormGroup = new FormGroup({
     email: new FormControl(''),
     contrasena: new FormControl(''),
   });
 
-  constructor(private formbuilder: FormBuilder, private servicio:UsuariosService, private router: Router) {}
-
-  login() {
-
-    let usuario = this.loginFormulario.value;
-    this.servicio.encontrarUsuarioPorEmail(email: string).subscribe(data => 
-      console.log(this.email));
-  }
+  constructor(private formbuilder: FormBuilder, private servicio: LoginService, private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -51,9 +29,21 @@ export class LoginComponent implements OnInit {
   get contrasena() {
     return this.loginFormulario.get('contrasena');
   }
+ 
+  login() {
+    this.servicio.getUserByEmailAndPassword(this.email?.value, this.contrasena?.value)?.subscribe((response) => {
+      if(response.rol === "Empleado") {
+        this.router.navigate(['/home-empleado']);
+      } else {
+        this.router.navigate(['/favorito']);
+      }
+    });
+  }
+
+  
+  
 
 
-*/
 
 
 }
