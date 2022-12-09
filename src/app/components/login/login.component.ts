@@ -1,10 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { UsuariosService } from 'src/app/servicios/usuarios.service';
+import { LoginService } from 'src/app/servicios/login.service';
 import { IntUsuario } from 'src/app/model/usuarios.interface';
 import { Router } from '@angular/router';
-import { LoginService } from 'src/app/servicios/login.service';
+import { FormGroup, FormBuilder, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
+
 
 @Component({
   selector: 'app-login',
@@ -14,6 +14,8 @@ import { LoginService } from 'src/app/servicios/login.service';
 
 export class LoginComponent implements OnInit {
 
+  listaUsuarios: IntUsuario[] = [];
+
   loginFormulario: FormGroup = new FormGroup({
     email: new FormControl(''),
     contrasena: new FormControl(''),
@@ -21,7 +23,17 @@ export class LoginComponent implements OnInit {
 
   constructor(private formbuilder: FormBuilder, private servicio: LoginService, private router: Router) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.obtenerTodosLosUsuarios();
+  }
+
+obtenerTodosLosUsuarios() {
+    this.servicio.mostrarTodosLosUsuarios().subscribe(data => {
+      this.listaUsuarios = data;
+    });
+  }
+
+ // === Toma de datos desde el formulario ===
 
   get email() {
     return this.loginFormulario.get('email');

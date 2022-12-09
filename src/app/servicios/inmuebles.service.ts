@@ -3,9 +3,11 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IntInmueble } from '../model/inmuebles.interface';
 
+
 @Injectable({
   providedIn: 'root',
 })
+
 export class InmueblesService {
 
   constructor(private http: HttpClient) {}

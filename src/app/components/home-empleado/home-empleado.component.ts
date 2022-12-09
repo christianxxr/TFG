@@ -6,15 +6,15 @@ import { Router } from '@angular/router';
 import { NuevoInmuebleComponent } from '../nuevo-inmueble/nuevo-inmueble.component';
 import { EditarInmuebleComponent } from '../editar-inmueble/editar-inmueble.component';
 
-
 @Component({
   selector: 'app-home-empleado',
   templateUrl: './home-empleado.component.html',
   styleUrls: ['./home-empleado.component.css']
 })
 
-
 export class HomeEmpleadoComponent implements OnInit {
+
+  listaInmuebles: IntInmueble[] = [];
 
   inmueble: IntInmueble = {
     inmuebleId: "",
@@ -28,9 +28,7 @@ export class HomeEmpleadoComponent implements OnInit {
     guardadoPor: []
   };
   
-  listaInmuebles: IntInmueble[] = [];
-
-
+  
   constructor(private servicio:InmueblesService, private router: Router) { }
 
   ngOnInit(): void {
@@ -41,7 +39,6 @@ export class HomeEmpleadoComponent implements OnInit {
     this.servicio.mostrarTodosLosInmuebles().subscribe(data => {
       this.listaInmuebles = data;
     });
-
   }
 
   nuevoInmueble() {
@@ -69,7 +66,5 @@ export class HomeEmpleadoComponent implements OnInit {
         this.obtenerTodosLosInmuebles());
     });
   }
-
-  
-  
+ 
 }

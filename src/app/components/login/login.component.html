@@ -1,3 +1,14 @@
+<div>
+  <ul *ngFor="let usuario of listaUsuarios">
+    <li>{{ usuario.usuarioId }}</li>
+    <li>{{ usuario.email }}</li>
+    <li>{{ usuario.nombre }}</li>
+    <li>{{ usuario.contrasena }}</li>
+    <li>{{ usuario.rol }}</li>
+  </ul>
+</div>
+
+
 <div class="login">
   <form [formGroup]="loginFormulario" class="custom-form" (ngSubmit)="login()">
     <h1>Login</h1>
