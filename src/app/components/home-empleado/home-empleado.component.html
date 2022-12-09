@@ -1,3 +1,5 @@
+
+
 <div class="container mt-3">
   <h4>Listado de inmuebles</h4>
   <button type="button" class="btn btn-sm mt-3" (click)="nuevoInmueble()">Nuevo inmueble</button>
@@ -28,4 +30,7 @@
       </tr>
     </tbody>
   </table>
+
+  <app-editar-inmueble [inmueble]="inmueble" hidden></app-editar-inmueble>
+
 </div>

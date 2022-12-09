@@ -13,7 +13,7 @@ import { InmueblesService } from 'src/app/servicios/inmuebles.service';
 
 export class EditarInmuebleComponent implements OnInit {
 
-  @Input() inmuebleId: string | undefined;
+  @Input() inmueble: IntInmueble | undefined;
 
   inmuebleExistenteFormulario: FormGroup = new FormGroup({
     inmuebleId: new FormControl(''),
