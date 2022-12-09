@@ -10,16 +10,10 @@ import { USUARIOS } from '../mocks/usuarios.mock';
 
 export class LoginService {
 
-email: string = '';
-
 constructor(private http: HttpClient) { }
 
 mostrarTodosLosUsuarios(): Observable<IntUsuario[]> {
   return this.http.get<IntUsuario[]>('/usuarios/mostrarTodos');
-}
-
-buscarUsuarioPorEmail(email: string): Observable<IntUsuario> {
-  return this.http.get<IntUsuario>('/usuarios/mostrar' + '/' + email);
 }
 
 // === Desde el mock ===
