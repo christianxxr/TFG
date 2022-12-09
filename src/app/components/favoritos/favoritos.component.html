@@ -13,13 +13,13 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let inmueble of listaInmuebles">
+        <td>{{ inmueble.tipoOperacion }}</td>
+        <td>{{ inmueble.pais }}</td>
+        <td>{{ inmueble.zona }}</td>
+        <td>{{ inmueble.area }}</td>
+        <td>{{ inmueble.tipoInmueble }}</td>
+        <td>{{ inmueble.precio | currency : "EUR" }}</td>
         <td>
           <a routerLink="detalle" class="linea btn more mx-1"
             >Más información</a
