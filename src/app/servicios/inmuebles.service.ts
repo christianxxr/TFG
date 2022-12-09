@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { IntInmueble } from '../model/inmuebles.interface';
 
@@ -7,13 +7,10 @@ import { IntInmueble } from '../model/inmuebles.interface';
   providedIn: 'root',
 })
 export class InmueblesService {
-  //urlRequestMapping: string = 'http://localhost:8089/inmuebles/';
 
   constructor(private http: HttpClient) {}
 
   incluirInmueble(inmueble: IntInmueble): Observable<IntInmueble> {
-    //let httpheaders = new HttpHeaders().set('Content-type', 'application/Json');
-    //let options = { headers: httpheaders};
     return this.http.post<IntInmueble>('/inmuebles/crear', inmueble);
   }
 
@@ -25,7 +22,6 @@ export class InmueblesService {
     return this.http.get<string>('/inmuebles/mostrar' + '/' + id);
   }
 
-  //ToDo: Método para editar un inmueble por id
   editarInmueble(inmueble: IntInmueble): Observable<IntInmueble> {
     return this.http.put<IntInmueble>('/inmuebles/modificar', inmueble);
   }
@@ -33,4 +29,5 @@ export class InmueblesService {
   eliminarInmueble(id: string): Observable<string> {
     return this.http.delete<string>('/inmuebles/borrar' + '/' + id);
   }
+
 }
